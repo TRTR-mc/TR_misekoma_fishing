@@ -16,4 +16,4 @@ JE1.18.1
 
 # 参考にさせていただいた動画
 コマンドAI 赤石愛のほうそうきょく 様  
-https://www.youtube.com/watch?v=VqfhhHkFI08&t=2223s&ab_channel=%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89AI%E8%B5%A4%E7%9F%B3%E6%84%9B%E3%81%AE%E3%81%BB%E3%81%86%E3%81%9D%E3%81%86%E3%81%8D%E3%82%87%E3%81%8F
+https://youtu.be/VqfhhHkFI08
