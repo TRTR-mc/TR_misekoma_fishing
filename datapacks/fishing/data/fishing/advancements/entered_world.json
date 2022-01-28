@@ -1,0 +1,11 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:location",
+            "conditions": {}
+        }
+    },
+    "rewards": {
+        "function": "fishing:entered_world"
+    }
+}
