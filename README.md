@@ -3,11 +3,14 @@
 
 # 概要
 魅せコマ出品物のワールドデータ  
-particleを利用してバニラのPostShaderの切り替えを行うことにより演出をしている  
+particleの色を利用してバニラのPostShaderの切り替えを行うことにより演出をしている  
 
 # 動作環境
 JE1.18.1
 ※マルチ動作未検証  
+
+# DLリンク
+https://github.com/TRTR-mc/TR_misekoma_fishing/releases/download/dl/TR_misekoma_fishing.zip
 
 # 注意点等
 **・描画設定を"最高設定"にしないと演出が出ません**  
