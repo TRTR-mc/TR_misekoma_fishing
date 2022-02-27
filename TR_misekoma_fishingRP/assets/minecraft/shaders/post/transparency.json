@@ -1,0 +1,135 @@
+{
+    "targets": [
+        "water",
+        "translucent",
+        "itemEntity",
+        "particles",
+        "clouds",
+        "weather",
+        "final",
+        "condition",
+        "temp",
+        "temp2"
+    ],
+    "passes": [
+        {
+            "name": "save_condition",
+            "intarget": "condition",
+            "outtarget": "temp",
+            "auxtargets": [
+                {
+                    "name": "InputSampler",
+                    "id": "particles"
+                }
+            ]
+        },
+        {
+            "name": "blit",
+            "intarget": "temp",
+            "outtarget": "condition"
+        },
+        {
+            "name": "transparency",
+            "intarget": "minecraft:main",
+            "outtarget": "final",
+            "auxtargets": [
+                {
+                    "name": "DiffuseDepthSampler",
+                    "id": "minecraft:main:depth"
+                },
+                {
+                    "name": "TranslucentSampler",
+                    "id": "translucent"
+                },
+                {
+                    "name": "TranslucentDepthSampler",
+                    "id": "translucent:depth"
+                },
+                {
+                    "name": "ItemEntitySampler",
+                    "id": "itemEntity"
+                },
+                {
+                    "name": "ItemEntityDepthSampler",
+                    "id": "itemEntity:depth"
+                },
+                {
+                    "name": "ParticlesSampler",
+                    "id": "particles"
+                },
+                {
+                    "name": "ParticlesDepthSampler",
+                    "id": "particles:depth"
+                },
+                {
+                    "name": "CloudsSampler",
+                    "id": "clouds"
+                },
+                {
+                    "name": "CloudsDepthSampler",
+                    "id": "clouds:depth"
+                },
+                {
+                    "name": "WeatherSampler",
+                    "id": "weather"
+                },
+                {
+                    "name": "WeatherDepthSampler",
+                    "id": "weather:depth"
+                }
+            ]
+        },
+        {
+            "name": "blit",
+            "intarget": "final",
+            "outtarget": "minecraft:main"
+        },
+        {
+            "name": "noise",
+            "intarget": "minecraft:main",
+            "outtarget": "temp",
+            "auxtargets": [
+                {
+                    "name": "InputSampler",
+                    "id": "condition"
+                }
+            ],
+            "uniforms": [
+                {
+                    "name": "Condition",
+                    "values": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "blood",
+            "intarget": "temp",
+            "outtarget": "temp2",
+            "auxtargets": [
+                {
+                    "name": "InputSampler",
+                    "id": "condition"
+                }
+            ],
+            "uniforms": [
+                {
+                    "name": "Condition",
+                    "values": [
+                        1.0,
+                        1.0,
+                        0.0
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "blit",
+            "intarget": "temp2",
+            "outtarget": "minecraft:main"
+        }
+    ]
+}
